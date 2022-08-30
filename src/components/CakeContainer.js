@@ -5,14 +5,14 @@ import { buyCake } from "../redux";
 const CakeContainer = (props) => {
   return (
     <div>
-      <h2>Number of Cakes - {props.numOfCakes}</h2>
+      <h2>Number of Cakes (HoC) - {props.numOfCakes}</h2>
       <button onClick={props.buyCake}>Buy Cake</button>
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
-  return { numOfCakes: state.numOfCakes };
+  return { numOfCakes: state.cake.numOfCakes };
 };
 
 const mapDispatchToProps = (dispatch) => {
